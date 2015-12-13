@@ -1,0 +1,8 @@
+.header {
+    @include grid-row;
+    margin-bottom: 1em;
+}
+
+.content {
+    @include grid-row;
+}
