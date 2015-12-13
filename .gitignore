@@ -1,3 +1,5 @@
 __pycache__/
 django-venv/
+node_modules/
 *.py[cod]
+db.sqlite3
