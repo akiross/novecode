@@ -30,7 +30,7 @@ class Source(models.Model):
 	snippets = models.ManyToManyField(Snippet, through='SnippetSource')
 
 	def __str__(self):
-		return self.filename
+		return '[{}] {}'.format(self.pk, self.filename)
 
 class SnippetSource(models.Model):
 	snippet = models.ForeignKey(Snippet)
@@ -38,7 +38,7 @@ class SnippetSource(models.Model):
 	number = models.PositiveIntegerField()
 
 	def __str__(self):
-		return self.source.filename + " - " + str(self.snippet)
+		return str(self.source) + " - " + str(self.snippet)
 
 	class Meta:
 		ordering = ('number',)
