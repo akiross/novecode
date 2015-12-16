@@ -3,3 +3,5 @@ django-venv/
 node_modules/
 *.py[cod]
 db.sqlite3
+.zsh_dir_*
+.*.sw[po]
